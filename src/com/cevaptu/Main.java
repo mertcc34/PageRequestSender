@@ -12,7 +12,10 @@ public class Main {
         int i = 0;
         while(i<20) {
             try {
-                URL url = new URL("http://cevaptu.com/soru/zenmate-vpn-guvenli-mi/");
+                String str ="http://cevaptu.com/soru/antalya-expo-2016-fuari-hakkinda-ne-dusunuyorsunuz-sizce-yuksek-meblaga-gore-gerekli-bir-yatirim-miydi/";
+                
+
+                URL url = new URL(str);
                 URLConnection mc = url.openConnection();
 
                 BufferedReader in = new BufferedReader(
@@ -20,9 +23,12 @@ public class Main {
                                 mc.getInputStream()));
                 String inputLine;
 
-                while ((inputLine = in.readLine()) != null)
+              //  while ((inputLine = in.readLine()) != null) {
                     //   System.out.println(inputLine);
-                    in.close();
+             //   }
+                System.out.println("Request number : " + (i+1));
+
+                in.close();
 
 
             } catch (Exception e) {
