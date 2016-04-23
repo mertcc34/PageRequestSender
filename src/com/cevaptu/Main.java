@@ -12,12 +12,12 @@ public class Main {
         int i = 0;
         while(i<20) {
             try {
-                URL yahoo = new URL("http://cevaptu.com/soru/zenmate-vpn-guvenli-mi/");
-                URLConnection yc = yahoo.openConnection();
+                URL url = new URL("http://cevaptu.com/soru/zenmate-vpn-guvenli-mi/");
+                URLConnection mc = url.openConnection();
 
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
-                                yc.getInputStream()));
+                                mc.getInputStream()));
                 String inputLine;
 
                 while ((inputLine = in.readLine()) != null)
