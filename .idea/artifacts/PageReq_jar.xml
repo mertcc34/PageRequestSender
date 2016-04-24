@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PageReq:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PageReq_jar</output-path>
+    <root id="archive" name="PageReq.jar">
+      <element id="module-output" name="PageReq" />
+    </root>
+  </artifact>
+</component>
