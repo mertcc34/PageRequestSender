@@ -27,14 +27,14 @@ public class Main implements ActionListener,KeyListener {
         f.setResizable(false);
 
         text.setVisible(true);
-        text.setBackground(Color.BLACK);
-        text.setForeground(Color.green);
-        text2.setBackground(Color.BLACK);
-        text2.setForeground(Color.green);
-        button1.setBackground(Color.orange);
-        button2.setBackground(Color.orange);
-        button1.setForeground(Color.red);
-        button2.setForeground(Color.red);
+       //text.setBackground(Color.BLACK);
+       // text.setForeground(Color.green);
+        //text2.setBackground(Color.BLACK);
+       // text2.setForeground(Color.green);
+        button1.setBackground(Color.black);
+        button2.setBackground(Color.black);
+        button1.setForeground(Color.green);
+        button2.setForeground(Color.green);
 
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setLayout(new GridLayout(4,1));
@@ -64,7 +64,7 @@ public class Main implements ActionListener,KeyListener {
 
 
     public static void main(String[] args) {
-        Main m =new Main();
+        new Main();
 
 
 
@@ -75,11 +75,11 @@ public class Main implements ActionListener,KeyListener {
     public void act(String s) {
 
         int i = 0;
-        while(i<113 && bool) {
-            
-            try {
-                String str =s;
+        while(i<4 && bool) {
+            String str =s;
 
+
+            try {
 
                 URL url = new URL(str);
                 URLConnection mc = url.openConnection();
@@ -87,26 +87,21 @@ public class Main implements ActionListener,KeyListener {
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
                                 mc.getInputStream()));
-               // String inputLine;
 
-                //  while ((inputLine = in.readLine()) != null) {
-                //   System.out.println(inputLine);
-                //   }
                 in.close();
-                System.out.println("Request number : " + (i+1));
-
-                text2.setText("Request number : " + (i+1));
-
-
-
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 text2.setText(e.getMessage());
-
             }
+
+            text2.setText("Request number : " + (i+1));
+            System.out.println(text2.getText());
+
             i++;
         }
+
+        text2.setText(i + " Requests sent to the URL");
     }
 
 
