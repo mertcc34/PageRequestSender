@@ -31,8 +31,8 @@ public class Main implements ActionListener,KeyListener {
        // text.setForeground(Color.green);
         //text2.setBackground(Color.BLACK);
        // text2.setForeground(Color.green);
-        button1.setBackground(Color.black);
-        button2.setBackground(Color.black);
+        button1.setBackground(Color.BLACK);
+        button2.setBackground(Color.BLACK);
         button1.setForeground(Color.green);
         button2.setForeground(Color.green);
 
@@ -74,6 +74,8 @@ public class Main implements ActionListener,KeyListener {
 
     public void act(String s) {
 
+        String temp="";
+
         int i = 0;
         while(i<4 && bool) {
             String str =s;
@@ -93,15 +95,17 @@ public class Main implements ActionListener,KeyListener {
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 text2.setText(e.getMessage());
+                temp = e.getMessage();
             }
-
-            text2.setText("Request number : " + (i+1));
-            System.out.println(text2.getText());
-
+            if(temp.equals("")) {
+                text2.setText("Request number : " + (i + 1));
+                System.out.println(text2.getText());
+            }
             i++;
         }
-
-        text2.setText(i + " Requests sent to the URL");
+        if(temp.equals("")) {
+            text2.setText(i + " Requests sent to the URL");
+        }
     }
 
 
