@@ -31,6 +31,11 @@ public class Main implements ActionListener,KeyListener {
         text.setForeground(Color.green);
         text2.setBackground(Color.BLACK);
         text2.setForeground(Color.green);
+        button1.setBackground(Color.orange);
+        button2.setBackground(Color.orange);
+        button1.setForeground(Color.red);
+        button2.setForeground(Color.red);
+
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         f.setLayout(new GridLayout(4,1));
 
