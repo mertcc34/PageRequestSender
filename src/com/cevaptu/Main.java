@@ -41,6 +41,7 @@ public class Main implements ActionListener,KeyListener {
         f.setLayout(new GridLayout(3,2));
 
         Font f1 = new Font("SansSerif", Font.BOLD, 25);
+        number.setFont(f1);
         text.setFont(f1);
         text2.setFont(f1);
         l.setBackground(Color.BLACK);
