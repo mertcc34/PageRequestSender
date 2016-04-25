@@ -13,6 +13,7 @@ public class Main implements ActionListener,KeyListener {
 
 
     JFrame f = new JFrame();
+    JTextField number = new JTextField();
     JTextField text = new JTextField();
     JTextField text2 = new JTextField();
     JLabel l = new JLabel();
@@ -37,7 +38,7 @@ public class Main implements ActionListener,KeyListener {
         button2.setForeground(Color.green);
 
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        f.setLayout(new GridLayout(4,1));
+        f.setLayout(new GridLayout(5,1));
 
         Font f1 = new Font("SansSerif", Font.BOLD, 25);
         text.setFont(f1);
@@ -49,6 +50,7 @@ public class Main implements ActionListener,KeyListener {
         button1.addActionListener(this);
         button2.addActionListener(this);
         //f.add(l);
+        f.add(number);
         f.add(text);
         f.add(button1);
         text2.setEditable(false);
@@ -77,7 +79,8 @@ public class Main implements ActionListener,KeyListener {
         String temp="";
 
         int i = 0;
-        while(i<4 && bool) {
+        int stop = Integer.parseInt(number.getText());
+        while(i<stop && bool) {
             String str =s;
 
 
