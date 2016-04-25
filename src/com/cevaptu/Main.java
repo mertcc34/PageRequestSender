@@ -38,7 +38,7 @@ public class Main implements ActionListener,KeyListener {
         button2.setForeground(Color.green);
 
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        f.setLayout(new GridLayout(5,1));
+        f.setLayout(new GridLayout(3,2));
 
         Font f1 = new Font("SansSerif", Font.BOLD, 25);
         text.setFont(f1);
@@ -56,6 +56,8 @@ public class Main implements ActionListener,KeyListener {
         text2.setEditable(false);
         f.add(text2);
         f.add(button2);
+        f.setResizable(true);
+
 
 
     }
@@ -77,9 +79,14 @@ public class Main implements ActionListener,KeyListener {
     public void act(String s) {
 
         String temp="";
-
+        int stop=0;
         int i = 0;
-        int stop = Integer.parseInt(number.getText());
+        try {
+            stop = Integer.parseInt(number.getText());
+        }catch (Exception e){
+            temp=e.getMessage();
+            text2.setText("Enter an integer number");
+        }
         while(i<stop && bool) {
             String str =s;
 
